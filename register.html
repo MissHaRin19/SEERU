@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CIRU Register</title>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="seeruimg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="register-container">
+        <h1>Register</h1>
+        <div class="form-group">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="location" placeholder="Location" required>
+        </div>
+        <button onclick="register()">Register</button>
+        <p>Already a user? <a href="login.html">Login here</a></p>
+    </div>
+</body>
+</html>
