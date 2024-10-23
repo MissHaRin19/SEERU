@@ -115,8 +115,6 @@ a {
     text-decoration: underline;
 }
 
-
-
 header {
     padding: 20px;
     background-color: #63E6BE; /* Header background color */
@@ -172,4 +170,24 @@ header {
 .icon-text {
     font-size: 1.2em; /* Text size */
     color: #333; /* Dark text color */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .icon {
+        width: 80px; /* Adjust width for smaller screens */
+        height: 80px; /* Adjust height for smaller screens */
+    }
+
+    .icon-img {
+        font-size: 2em; /* Decrease icon size */
+    }
+
+    .icon-text {
+        font-size: 1em; /* Adjust text size */
+    }
+
+    .line-heading {
+        font-size: 2em; /* Decrease heading size */
+    }
 }
