@@ -1,9 +1,10 @@
 /* General styling */
 body {
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
     font-family: Arial, sans-serif;
-    color: white; /* Change text color for better visibility */
+    color: #333; /* Darker text for better visibility */
+    background-color: #f4f4f4; /* Light background for contrast */
+    text-align: center; /* Center text in the body */
 }
 
 /* Background video styling */
@@ -114,36 +115,61 @@ a {
     text-decoration: underline;
 }
 
-/* Home page styling */
+
+
+header {
+    padding: 20px;
+    background-color: #63E6BE; /* Header background color */
+    color: white; /* Header text color */
+}
+
+.start-link {
+    margin: 10px 0;
+}
+
+/* Heading with Line */
+.line-heading {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Container styling */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Limit container width */
 }
 
+/* Icon styling */
 .icon {
-    border: 2px solid black;
-    margin: 10px;
+    border: 2px solid #63E6BE;
+    margin: 15px;
     padding: 20px;
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Fixed width for icons */
+    height: 120px; /* Fixed height for icons */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: pastelgreen; 
+    background-color: white; /* White background for icons */
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
 .icon:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-
+.icon-img {
+    font-size: 3em; /* Increased icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+}
 
 .icon-text {
-    margin-top: 10px;
+    font-size: 1.2em; /* Text size */
+    color: #333; /* Dark text color */
 }
