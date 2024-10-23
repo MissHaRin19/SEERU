@@ -124,6 +124,28 @@ header {
 .start-link {
     margin: 10px 0;
 }
+header {
+    position: relative; /* Allows absolute positioning of child elements */
+    padding: 20px;
+    background-color: #A7C7E7; /* Header background color */
+    color: white; /* Header text color */
+}
+
+.weather-info {
+    position: absolute; /* Position it relative to the header */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 1.2em; /* Adjust font size */
+}
+
+.weather-info .icon-img {
+    font-size: 2em; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
 
 /* Heading with Line */
 .line-heading {
