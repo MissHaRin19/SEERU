@@ -1,8 +1,8 @@
 function login() {
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('username').value.trim(); // Trim whitespace
     const password = document.getElementById('password').value;
 
-    // Retrieve stored credentials from localStorage (for demo purposes)
+    // Retrieve stored credentials from localStorage
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
 
@@ -11,14 +11,21 @@ function login() {
         // Redirect to home page after successful login
         window.location.href = 'home.html';
     } else {
+        // Clear password for security
+        document.getElementById('password').value = '';
         document.getElementById('error-message').innerText = 'Invalid username or password!';
     }
 }
 
-// Call this function during registration to store credentials
 function register() {
-    const username = document.getElementById('username').value;
+    const username = document.getElementById('username').value.trim(); // Trim whitespace
     const password = document.getElementById('password').value;
+
+    // Basic validation
+    if (!username || !password) {
+        alert('Please enter both username and password.');
+        return;
+    }
 
     // Store credentials in localStorage
     localStorage.setItem('username', username);
@@ -27,4 +34,3 @@ function register() {
     // Redirect to home page
     window.location.href = 'home.html';
 }
-
