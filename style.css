@@ -117,7 +117,7 @@ a {
 
 header {
     padding: 20px;
-    background-color: #63E6BE; /* Header background color */
+    background-color: #A7C7E7; /* Header background color */
     color: white; /* Header text color */
 }
 
@@ -142,7 +142,7 @@ header {
 
 /* Icon styling */
 .icon {
-    border: 2px solid #63E6BE;
+    border: 2px solid #A7C7E7;
     margin: 15px;
     padding: 20px;
     width: 120px; /* Fixed width for icons */
