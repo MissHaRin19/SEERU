@@ -57,7 +57,7 @@
                     .then(data => {
                         const temp = data.main.temp;
                         const weatherDescription = data.weather[0].description;
-                        document.getElementById('weather').innerHTML = `Current Weather in ${userLocation}: ${temp}°C, ${weatherDescription}`;
+                        document.getElementById('weather').innerHTML = `${userLocation}: ${temp}°C, ${weatherDescription}`;
                     })
                     .catch(error => {
                         document.getElementById('weather').innerHTML = 'Weather data not available';
