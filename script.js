@@ -1,36 +1,59 @@
 function login() {
-    const username = document.getElementById('username').value.trim(); // Trim whitespace
+    const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
 
-    // Retrieve stored credentials from localStorage
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
 
-    // Check against stored credentials
     if (username === storedUsername && password === storedPassword) {
-        // Redirect to home page after successful login
         window.location.href = 'home.html';
     } else {
-        // Clear password for security
         document.getElementById('password').value = '';
-        document.getElementById('error-message').innerText = 'Invalid username or password!';
+        showErrorMessage('Invalid username or password!');
     }
 }
 
 function register() {
-    const username = document.getElementById('username').value.trim(); // Trim whitespace
+    const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
 
-    // Basic validation
     if (!username || !password) {
-        alert('Please enter both username and password.');
+        showErrorMessage('Please enter both username and password.');
         return;
     }
 
-    // Store credentials in localStorage
     localStorage.setItem('username', username);
     localStorage.setItem('password', password);
 
-    // Redirect to home page
     window.location.href = 'home.html';
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const apiKey = '49d9f553d6c66f032df7cc6b0bbfc8b4';
+    const userLocation = localStorage.getItem('userLocation');
+
+    if (userLocation) {
+        const locationUpperCase = userLocation.toUpperCase(); // Convert to uppercase
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${locationUpperCase}&appid=${apiKey}&units=metric`;
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Weather data not available');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const temp = data.main.temp;
+                const weatherDescription = data.weather[0].description;
+                document.getElementById('weather').innerHTML = `${locationUpperCase}: ${temp}°C, ${weatherDescription}`;
+            })
+            .catch(error => {
+                document.getElementById('weather').innerHTML = 'Weather data not available';
+                console.error(error);
+            });
+    } else {
+        document.getElementById('weather').innerHTML = 'Location not set';
+    }
+});
+
