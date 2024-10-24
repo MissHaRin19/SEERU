@@ -4,17 +4,17 @@ body {
     font-family: Arial, sans-serif;
     color: #333; /* Darker text for better visibility */
     background-color: #f4f4f4; /* Light background for contrast */
-    text-align: center; /* Center text in the body */
+    display: flex; /* Use flexbox for layout */
 }
 
 /* Header styling */
 header {
-    position: relative; /* Allows positioning */
+    position: fixed; /* Fix the header on the left side */
     padding: 20px;
     background-color: #A7C7E7; /* Header background color */
     color: white; /* Header text color */
     width: 200px; /* Fixed width for the header */
-    height: 100vh; /* Full height */
+    height: 100%; /* Full height of the viewport */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the start (left) */
