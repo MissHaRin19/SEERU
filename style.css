@@ -13,16 +13,18 @@ header {
     padding: 20px;
     background-color: #A7C7E7; /* Header background color */
     color: white; /* Header text color */
-    width: 200px; /* Fixed width for the header */
+    width: 80px; /* Fixed width for the header */
     height: 100%; /* Full height of the viewport */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start (left) */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
 }
 
 .line-heading {
-    font-size: 2.5em;
-    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Adjust size as needed */
+    writing-mode: vertical-rl; /* Rotate text vertically */
+    transform: rotate(180deg); /* Adjust rotation for correct reading */
 }
 
 /* Container styling */
@@ -32,7 +34,7 @@ header {
     gap: 20px; /* Space between boxes */
     margin: 20px auto; /* Center the container */
     max-width: 800px; /* Limit container width */
-    padding-left: 220px; /* Add padding to push content right */
+    padding-left: 100px; /* Add padding to push content right */
 }
 
 /* Icon styling */
