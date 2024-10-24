@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<header>
-    <h1 class="line-heading">S</h1>
-    <h1 class="line-heading">E</h1>
-    <h1 class="line-heading">E</h1>
-    <h1 class="line-heading">R</h1>
-    <h1 class="line-heading">U</h1>
-    <div id="weather" class="weather-info">
-        <i id="weather-icon" class="icon-img"></i>
-        <span id="weather-description">Loading weather...</span>
-    </div>
-</header>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>SEERU Dashboard</title>
+</head>
 <body>
     <header>
     <h1 class="line-heading">SEERU Dashboard</h1>
@@ -50,7 +45,7 @@
             const userLocation = localStorage.getItem('userLocation');
 
             if (userLocation) {
-                const url = `https://api.openweathermap.org/data/2.5/weather?q=${userLocation}&appid=${apiKey}&units=metric`;
+                const url = https://api.openweathermap.org/data/2.5/weather?q=${userLocation}&appid=${apiKey}&units=metric;
 
                 fetch(url)
                     .then(response => {
@@ -62,7 +57,7 @@
                     .then(data => {
                         const temp = data.main.temp;
                         const weatherDescription = data.weather[0].description;
-                        document.getElementById('weather').innerHTML = `${userLocation}: ${temp}°C, ${weatherDescription}`;
+                        document.getElementById('weather').innerHTML = ${userLocation}: ${temp}°C, ${weatherDescription};
                     })
                     .catch(error => {
                         document.getElementById('weather').innerHTML = 'Weather data not available';
