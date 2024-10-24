@@ -7,19 +7,103 @@ body {
     text-align: center; /* Center text in the body */
 }
 
-/* Background video styling */
-.background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Use viewport width */
-    height: 100vh; /* Use viewport height */
-    object-fit: cover; /* Cover the entire viewport */
-    z-index: -1; /* Place behind other elements */
+/* Header styling */
+header {
+    position: relative; /* Allows positioning */
+    padding: 20px;
+    background-color: #A7C7E7; /* Header background color */
+    color: white; /* Header text color */
+    width: 200px; /* Fixed width for the header */
+    height: 100vh; /* Full height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
 }
 
+.line-heading {
+    font-size: 2.5em;
+    margin: 0; /* Remove default margin */
+}
 
-/* Login and Register container styling */
+/* Container styling */
+.container {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between boxes */
+    margin: 20px auto; /* Center the container */
+    max-width: 800px; /* Limit container width */
+    padding-left: 220px; /* Add padding to push content right */
+}
+
+/* Icon styling */
+.icon {
+    border: 2px solid #A7C7E7;
+    margin: 15px;
+    padding: 20px;
+    width: 120px; /* Fixed width for icons */
+    height: 120px; /* Fixed height for icons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white; /* White background for icons */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.icon-img {
+    font-size: 3em; /* Increased icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.icon-text {
+    font-size: 1.2em; /* Text size */
+    color: #333; /* Dark text color */
+}
+
+/* Weather info styling */
+.weather-info {
+    position: absolute; /* Position it relative to the header */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    color: white; /* Text color */
+    font-size: 1.2em; /* Adjust font size */
+}
+
+.weather-info .icon-img {
+    font-size: 2em; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .icon {
+        width: 80px; /* Adjust width for smaller screens */
+        height: 80px; /* Adjust height for smaller screens */
+    }
+
+    .icon-img {
+        font-size: 2em; /* Decrease icon size */
+    }
+
+    .icon-text {
+        font-size: 1em; /* Adjust text size */
+    }
+
+    .line-heading {
+        font-size: 2em; /* Decrease heading size */
+    }
+}
+
+/* Additional styles for forms and popups */
 .login-container, .register-container {
     position: absolute; /* Positioning for centering */
     top: 50%;
@@ -115,111 +199,6 @@ a {
     text-decoration: underline;
 }
 
-header {
-    padding: 20px;
-    background-color: #A7C7E7; /* Header background color */
-    color: white; /* Header text color */
-}
-
 .start-link {
     margin: 10px 0;
-}
-header {
-    position: relative; /* Allows absolute positioning of child elements */
-    padding: 20px;
-    background-color: #A7C7E7; /* Header background color */
-    color: white; /* Header text color */
-}
-
-.weather-info {
-    position: absolute; /* Position it relative to the header */
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    display: flex;
-    align-items: center;
-    color: white; /* Text color */
-    font-size: 1.2em; /* Adjust font size */
-}
-
-.weather-info .icon-img {
-    font-size: 2em; /* Adjust icon size */
-    margin-right: 10px; /* Space between icon and text */
-}
-
-
-header {
-    position: relative; /* Allows positioning */
-    padding: 20px;
-    background-color: #A7C7E7; /* Header background color */
-    color: white; /* Header text color */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-}
-
-.line-heading {
-    font-size: 2.5em;
-    margin: 0;
-    margin-right: auto; /* Push the heading to the left */
-}
-
-/* Update container styling for icons */
-.container {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between boxes */
-    margin: 20px auto;
-    max-width: 800px; /* Limit container width */
-}
-
-
-/* Icon styling */
-.icon {
-    border: 2px solid #A7C7E7;
-    margin: 15px;
-    padding: 20px;
-    width: 120px; /* Fixed width for icons */
-    height: 120px; /* Fixed height for icons */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: white; /* White background for icons */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
-}
-
-.icon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-.icon-img {
-    font-size: 3em; /* Increased icon size */
-    margin-bottom: 10px; /* Space between icon and text */
-}
-
-.icon-text {
-    font-size: 1.2em; /* Text size */
-    color: #333; /* Dark text color */
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-    .icon {
-        width: 80px; /* Adjust width for smaller screens */
-        height: 80px; /* Adjust height for smaller screens */
-    }
-
-    .icon-img {
-        font-size: 2em; /* Decrease icon size */
-    }
-
-    .icon-text {
-        font-size: 1em; /* Adjust text size */
-    }
-
-    .line-heading {
-        font-size: 2em; /* Decrease heading size */
-    }
 }
